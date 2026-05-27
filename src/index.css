@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-bg-dark: #050505;
+  --color-card-dark: #000000;
+  --color-brand-orange: #FF5F00;
+  --color-border-dark: #1E293B;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+}
+
+/* Custom Scrollbar hide utilities for internal card scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Global resets */
+body {
+  background-color: #050505;
+  color: #F8FAFC;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01" on, "ss02" on, "cv01" on;
+}
+
+/* Spaceship UI font alignments */
+h1, h2, h3, h4, p {
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
