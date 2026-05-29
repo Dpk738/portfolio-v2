@@ -11,6 +11,15 @@ const projects = [
     desc: 'Bespoke online reservation and sensory cafe design ecosystem. Implements fully procedural seating grids and fluid web interactions.',
     tech: 'React / Framer Motion / ThreeJS',
     url: 'https://dwaara-cafe-website.vercel.app/'
+  },
+  {
+    id: 'archilabs',
+    title: 'Dwaraa Archilabs',
+    category: 'Architecture & Interiors',
+    year: '2026',
+    desc: 'Designed and developed a premium architecture and interior design website concept for Dwaara Archilabs, focused on elevating brand perception, trust, and client conversion through a modern digital experience.',
+    tech: 'React / Tailwind CSS / Framer Motion',
+    url: 'https://dwaraa-archilabs.vercel.app/'
   }
 ];
 

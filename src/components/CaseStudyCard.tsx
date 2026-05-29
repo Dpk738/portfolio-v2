@@ -19,6 +19,14 @@ const caseStudies: CaseStudy[] = [
     year: '2026',
     role: 'Branding & UI/UX Strategy',
     content: 'Dwaara Cafe is a premium South Indian tiffin café concept website designed to elevate the brand’s digital identity through a modern yet culturally rooted experience.\n\nThe project focused on combining traditional South Indian warmth with contemporary UI aesthetics using immersive visuals, premium typography, and conversion-focused layouts.\n\nI designed a fully responsive experience featuring curated menu storytelling, modern café branding, intuitive navigation, and seamless mobile optimization.\n\nThe interface was crafted to emotionally reflect comfort, authenticity, and hygienic dining while improving discoverability and customer trust online.\n\nBuilt using modern frontend workflows, the project showcases my approach toward blending branding, UI/UX strategy, motion design, and experiential web storytelling.'
+  },
+  {
+    id: 'archilabs',
+    title: 'Dwaraa Archilabs',
+    category: 'Architecture & Interiors',
+    year: '2026',
+    role: 'Full-Stack Design & Development',
+    content: "Dwaara Archilabs is an emerging architecture and interior design firm based in Hyderabad. After discovering that the brand's website consisted only of a placeholder landing page, I independently designed and developed a premium website concept to demonstrate how a stronger digital presence could elevate client trust and brand perception.\n\nThe experience was built around luxury positioning, project storytelling, service clarity, and consultation-driven conversions. Through refined typography, immersive imagery, and structured content architecture, the concept transforms Dwaara from a local firm into a digitally credible design studio.\n\nThis project highlights my ability to identify business opportunities and translate them into impactful web experiences."
   }
 ];
 

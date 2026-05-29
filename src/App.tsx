@@ -9,6 +9,7 @@ import { AboutCard } from './components/AboutCard';
 import { ContactCard } from './components/ContactCard';
 import { AvailabilityCard } from './components/AvailabilityCard';
 import { CaseStudyCard } from './components/CaseStudyCard';
+import { SciFiGraphCard } from './components/SciFiGraphCard';
 
 const cardVariants = {
   initial: { opacity: 0, scale: 0.98, y: 10 },
@@ -40,7 +41,7 @@ function App() {
     <div className="relative min-h-screen md:h-screen w-screen bg-[#050505] text-[#F8FAFC] font-sans flex flex-col items-center justify-center overflow-y-auto md:overflow-hidden p-4 md:p-5 lg:p-6 select-none">
       {/* Main Grid Wrapper (Edge-to-Edge Desktop Layout) */}
       <div className="w-full h-full flex items-center justify-center">
-        <main className="w-full h-full grid grid-cols-1 md:grid-cols-12 md:grid-rows-12 gap-4">
+        <main className="w-full h-full grid grid-cols-2 md:grid-cols-12 md:grid-rows-12 gap-4">
           
           {/* Card 1: Intro Card (6x4) */}
           <motion.div
@@ -61,7 +62,7 @@ function App() {
             initial="initial"
             animate="animate"
             whileHover="hover"
-            className="col-span-full md:col-start-7 md:col-end-11 md:row-start-1 md:row-end-3 rounded-2xl border border-[#475569] cursor-default bg-[#000000] overflow-hidden"
+            className="col-span-1 md:col-start-7 md:col-end-11 md:row-start-1 md:row-end-3 rounded-2xl border border-[#475569] cursor-default bg-[#000000] overflow-hidden"
           >
             <ClockCard />
           </motion.div>
@@ -73,7 +74,7 @@ function App() {
             initial="initial"
             animate="animate"
             whileHover="hover"
-            className="col-span-full md:col-start-11 md:col-end-13 md:row-start-1 md:row-end-3 rounded-2xl border border-[#475569] cursor-default bg-[#000000] overflow-hidden"
+            className="col-span-1 md:col-start-11 md:col-end-13 md:row-start-1 md:row-end-3 rounded-2xl border border-[#475569] cursor-default bg-[#000000] overflow-hidden"
           >
             <TechStackCard />
           </motion.div>
@@ -90,16 +91,28 @@ function App() {
             <StatusCard />
           </motion.div>
 
-          {/* Card 5: Selected Work (7x4) */}
+          {/* Card 5a: Selected Work (4x4) */}
           <motion.div
             custom={4}
             variants={cardVariants}
             initial="initial"
             animate="animate"
             whileHover="hover"
-            className="col-span-full md:col-start-1 md:col-end-8 md:row-start-5 md:row-end-9 rounded-2xl border border-[#475569] cursor-default bg-[#000000] overflow-hidden"
+            className="col-span-full md:col-start-1 md:col-end-5 md:row-start-5 md:row-end-9 rounded-2xl border border-[#475569] cursor-default bg-[#000000] overflow-hidden"
           >
             <SelectedWorkCard />
+          </motion.div>
+
+          {/* Card 5b: Sci-Fi Telemetry Graph (3x4) */}
+          <motion.div
+            custom={5}
+            variants={cardVariants}
+            initial="initial"
+            animate="animate"
+            whileHover="hover"
+            className="col-span-full md:col-start-5 md:col-end-8 md:row-start-5 md:row-end-9 rounded-2xl border border-[#475569] cursor-default bg-[#000000] overflow-hidden"
+          >
+            <SciFiGraphCard />
           </motion.div>
 
           {/* Card 9: Availability Card (3x4) */}

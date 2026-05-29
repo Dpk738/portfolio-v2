@@ -76,7 +76,7 @@ export const TechStackCard: React.FC = () => {
   return (
     <div className="relative overflow-hidden h-full w-full flex flex-col justify-between select-none text-white bg-transparent">
       {/* Card Header */}
-      <div className="flex justify-between items-center text-[8.5px] uppercase tracking-wider text-[#94A3B8] font-mono px-5 pt-4 pb-2 shrink-0 w-full border-b border-[#94A3B8]/45">
+      <div className="flex justify-between items-center text-[8.5px] uppercase tracking-wider text-[#94A3B8] font-mono px-3.5 sm:px-5 pt-4 pb-2 shrink-0 w-full border-b border-[#94A3B8]/45">
         <span>TECH_STACK</span>
         <span className="text-right text-[#94A3B8]/80 font-mono tracking-wider truncate max-w-[110px]">
           {hoveredTech ? hoveredTech : 'DECLARED_OK'}
@@ -95,7 +95,7 @@ export const TechStackCard: React.FC = () => {
               onMouseEnter={() => setHoveredTech(tech.name)}
               onMouseLeave={() => setHoveredTech(null)}
               transition={{ type: 'spring', stiffness: 450, damping: 25 }}
-              className={`group flex items-center justify-center w-full h-full border-[#94A3B8]/45 transition-all duration-300 ${isNotFirstCol ? 'border-l' : ''
+              className={`group flex items-center justify-center w-full h-full border-[#94A3B8]/45 transition-all duration-300 py-2 ${isNotFirstCol ? 'border-l' : ''
                 } ${isFirstRow ? 'border-b' : ''}`}
             >
               <Icon className="w-[22px] h-[22px] text-[#94A3B8] group-hover:text-[#ff5f00] transition-colors duration-300" />
