@@ -98,7 +98,7 @@ function App() {
             initial="initial"
             animate="animate"
             whileHover="hover"
-            className="col-span-full md:col-start-1 md:col-end-5 md:row-start-5 md:row-end-9 rounded-2xl border border-[#475569] cursor-default bg-[#000000] overflow-hidden"
+            className="col-span-full md:col-start-1 md:col-end-5 md:row-start-5 md:row-end-9 rounded-2xl border border-[#475569] cursor-default bg-transparent overflow-hidden min-h-[280px] md:min-h-0"
           >
             <SelectedWorkCard />
           </motion.div>

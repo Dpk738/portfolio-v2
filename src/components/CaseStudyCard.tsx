@@ -27,6 +27,30 @@ const caseStudies: CaseStudy[] = [
     year: '2026',
     role: 'Full-Stack Design & Development',
     content: "Dwaara Archilabs is an emerging architecture and interior design firm based in Hyderabad. After discovering that the brand's website consisted only of a placeholder landing page, I independently designed and developed a premium website concept to demonstrate how a stronger digital presence could elevate client trust and brand perception.\n\nThe experience was built around luxury positioning, project storytelling, service clarity, and consultation-driven conversions. Through refined typography, immersive imagery, and structured content architecture, the concept transforms Dwaara from a local firm into a digitally credible design studio.\n\nThis project highlights my ability to identify business opportunities and translate them into impactful web experiences."
+  },
+  {
+    id: 'itlu',
+    title: 'ITLU',
+    category: 'Fine Dining Experience',
+    year: '2026',
+    role: 'UX Design & Frontend Development',
+    content: 'ITLU is a classic South Indian vegetarian fine-dining brand with premium locations in Jubilee Hills and Financial District, Hyderabad. I designed and built a full-featured brand website that combines deep heritage storytelling with conversion-focused user experiences.\n\nThe culinary concept is rooted in the traditions of five southern states, drawing from over 50 family recipes. I structured the page flow to reflect this heritage, leading with a visual preview of signature items like Neyyi Karam Dosa and a showcase of the Rajabhojanam Thali (a royal feast served in custom brassware). To handle their extensive offerings, I implemented an elegant, interactive menu modal featuring dedicated categories like "Ammamma Specials" and "Jain Specials."\n\nTo drive business growth, the site integrates a tailored catering inquiry workflow for premium events (highlighting live dosa counters and traditional brass layouts) alongside location-specific contact channels and guest reviews. The centerpiece of the site is an intuitive, two-step table reservation system that lets guests choose their preferred venue and input dining details, providing a seamless booking confirmation loop that positions ITLU as a premium culinary destination.'
+  },
+  {
+    id: 'marala',
+    title: 'Marala Telugu Kitchen',
+    category: 'Traditional Regional Cuisine',
+    year: '2026',
+    role: 'Creative Direction & Full-Stack Development',
+    content: 'Marala Telugu Kitchen is an authentic regional restaurant in Gachibowli’s Financial District, celebrating the distinct culinary legacies of Andhra Pradesh and Telangana. The project centers around a nostalgic "Marala" (meaning "Again" in Telugu) narrative, evoking memories of home-cooked meals and regional festivals.\n\nI designed and developed a brand-forward experience that highlights their signature dishes (such as the multi-course Rajamahendravaram Bhojanam and traditional Atreyapuram Pootharekulu) with pricing and detailed ingredient spotlights. Understanding their target audience in the tech corridor, I implemented a comprehensive FAQ module addressing corporate catering and lunchbox delivery needs.\n\nFor reservations, I created a custom interactive booking modal featuring advanced seating-preference selectors (traditional banana leaf dining, private dining rooms, or corporate group blocks). This tailored UX layout successfully streams individual diners and corporate events into distinct conversion funnels, maximizing seat capacity and streamlining the booking process for both casual diners and business clients.'
+  },
+  {
+    id: 'aenugu',
+    title: 'Aenugu',
+    category: 'Luxury Fine Dining',
+    year: '2026',
+    role: 'Creative Web Design & UX Engineering',
+    content: 'Aenugu is an ultra-premium fine-dining destination in Bandlaguda, Hyderabad, that elevates traditional Telugu culinary heritage to a luxury experience. Drawing inspiration from its name—symbolizing strength, grace, and heritage—the site is engineered to reflect ancestral cooking techniques combined with warm, attentive hospitality.\n\nI built a highly visual, modern site architecture that showcases Aenugu\'s signature culinary elements, such as clay and brass slow-cooking techniques, and premium dishes like Gongura Mamsam and the 14-course Royal Rajahmundry Thali. The website features an interactive architectural walkthrough highlighting their physical spaces—including the "Manduva Logili" (open courtyard), carved wooden pillars, and custom terracotta/terrazzo masonry—creating a digital preview of the restaurant’s physical elegance.\n\nThe reservation experience uses a bespoke booking module optimized for fine-dining occasions, enabling guests to request specific timing, seat placements, and state dietary or celebratory notes. Through smooth motion layouts and heritage-infused brand aesthetics, the project establishes a cohesive digital footprint that translates Aenugu’s offline luxury into a high-converting online presence.'
   }
 ];
 
