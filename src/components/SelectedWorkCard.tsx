@@ -157,6 +157,7 @@ export const SelectedWorkCard: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [containerHeight, setContainerHeight] = useState(400);
   const [touchStart, setTouchStart] = useState<number | null>(null);
+  const touchStartRef = useRef<number | null>(null);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const isAnimating = useRef(false);
@@ -318,27 +319,46 @@ export const SelectedWorkCard: React.FC = () => {
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (isAnimating.current) return;
-    setTouchStart(e.targetTouches[0].clientY);
+    const yVal = e.targetTouches[0].clientY;
+    setTouchStart(yVal);
+    touchStartRef.current = yVal;
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (touchStart === null || isAnimating.current) return;
-    const touchEnd = e.targetTouches[0].clientY;
-    const diff = touchStart - touchEnd;
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
 
-    let nextVal = diff;
-    const minVal = -containerHeight;
-    const maxVal = containerHeight;
+    const onTouchMove = (e: TouchEvent) => {
+      const currentTouchStart = touchStartRef.current;
+      if (currentTouchStart === null || isAnimating.current) return;
 
-    if (nextVal < minVal) nextVal = minVal;
-    if (nextVal > maxVal) nextVal = maxVal;
+      if (e.cancelable) {
+        e.preventDefault();
+      }
 
-    scrollOffsetVal.set(nextVal);
-  };
+      const touchEnd = e.targetTouches[0].clientY;
+      const diff = currentTouchStart - touchEnd;
+
+      let nextVal = diff;
+      const minVal = -containerHeight;
+      const maxVal = containerHeight;
+
+      if (nextVal < minVal) nextVal = minVal;
+      if (nextVal > maxVal) nextVal = maxVal;
+
+      scrollOffsetVal.set(nextVal);
+    };
+
+    container.addEventListener('touchmove', onTouchMove, { passive: false });
+    return () => {
+      container.removeEventListener('touchmove', onTouchMove);
+    };
+  }, [containerHeight, scrollOffsetVal]);
 
   const handleTouchEnd = () => {
     if (isAnimating.current) return;
     setTouchStart(null);
+    touchStartRef.current = null;
     handleScrollSnap();
   };
 
@@ -349,9 +369,8 @@ export const SelectedWorkCard: React.FC = () => {
       onMouseLeave={() => { isHovered.current = false; }}
       onWheel={handleWheel}
       onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      className="relative overflow-hidden h-full w-full flex flex-col justify-between group select-none text-white bg-transparent"
+      className="relative overflow-hidden h-full w-full flex flex-col justify-between group select-none text-white bg-transparent touch-none"
     >
       {/* Background glow to emphasize glassmorphic refractions */}
       <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 rounded-full bg-[#FF5F00]/8 blur-[70px] pointer-events-none z-0" />
